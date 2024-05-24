@@ -13,9 +13,10 @@ export const updateDiscussionComments = async (
 
   let updatedCommentCount = 0
 
-  const { _id, badges, location } = user
+  const { _id, badges, coverImages, location } = user
   const userDetails = {
     creatorCountry: location?.countryCode || '',
+    creatorImage: coverImages[0].downloadUrl,
     isUserVerified: !!badges?.verified,
     isUserSupporter: !!badges?.supporter,
   }
