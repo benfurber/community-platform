@@ -5,7 +5,7 @@ import { Analytics } from 'src/common/Analytics'
 import { getSupportedModules, isModuleSupported, MODULE } from 'src/modules'
 import Main from 'src/pages/common/Layout/Main'
 import { SeoTagsUpdateComponent } from 'src/utils/seo'
-import { Box, Flex } from 'theme-ui'
+import { Box, Flex, Text } from 'theme-ui'
 
 import { ScrollToTop } from '../common/ScrollToTop'
 import { NotFoundPage } from './NotFound/NotFound'
@@ -88,14 +88,18 @@ export const Pages = () => {
       <Box
         sx={{
           position: 'fixed',
-          bottom: '30px',
-          right: '30px',
-          display: ['none', 'none', 'block'],
+          bottom: [1, 5],
+          right: [1, 5],
+          display: 'block',
         }}
       >
-        <ExternalLink href="https://discord.gg/gJ7Yyk4" data-cy="feedback">
+        <ExternalLink
+          href="https://onearmy.retool.com/form/c48a8f5a-4f53-4c58-adda-ef4f3cd8dee1"
+          data-cy="feedback"
+        >
           <Button variant="primary" icon="comment">
-            Join our chat
+            <Text sx={{ display: ['none', 'inherit'] }}>Website Problem?</Text>
+            <Text sx={{ display: ['inherit', 'none'] }}>Problem?</Text>
           </Button>
         </ExternalLink>
       </Box>
