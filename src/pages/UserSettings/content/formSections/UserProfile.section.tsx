@@ -247,7 +247,7 @@ export const UserProfile = () => {
               />
 
               <>
-                {!!notification.show && pristine && !touched && (
+                {notification.show && pristine && (
                   <TextNotification
                     isVisible={notification.show}
                     variant={notification.variant}
