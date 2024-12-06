@@ -182,9 +182,9 @@ export const HowtoList = observer(() => {
       <MoreContainer m={'0 auto'} pt={60} pb={90}>
         <Flex sx={{ alignItems: 'center', flexDirection: 'column' }} mt={5}>
           <Heading as="p" sx={{ textAlign: 'center' }}>
-            Inspire the {siteName} world.
+            Contribute to the {siteName} library,
             <br />
-            Share your how-to!
+            share your project.
           </Heading>
         </Flex>
       </MoreContainer>
