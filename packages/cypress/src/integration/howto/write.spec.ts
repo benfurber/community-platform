@@ -104,6 +104,7 @@ describe('[Library]', () => {
   describe('[Create a project]', () => {
     const randomId = faker.random.alphaNumeric(8)
     const creator = generateNewUserDetails()
+
     const expected = {
       _createdBy: creator.username,
       _deleted: false,
