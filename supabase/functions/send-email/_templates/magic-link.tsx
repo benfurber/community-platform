@@ -7,7 +7,7 @@ import { Hero } from './components/hero.tsx'
 import { PlainText } from './components/plain-text.tsx'
 
 const copy = {
-  h1: (username: string) => `Hey ${username}! Time to login`,
+  h1: `Oh hey! Time to login`,
   intro: 'You requested a magic link for fast login',
   clickHere: 'Login... with magic!',
   notRequested:
@@ -16,7 +16,7 @@ const copy = {
 }
 
 interface SignUpEmailProps {
-  username: string
+  username: undefined
   supabase_url: string
   newEmail: string
   email_action_type: string
@@ -25,14 +25,14 @@ interface SignUpEmailProps {
 }
 
 export const MagicLinkEmail = (props: SignUpEmailProps) => {
-  const { username, supabase_url, email_action_type, redirect_to, token_hash } =
+  const { supabase_url, email_action_type, redirect_to, token_hash } =
     props
 
   const href = `${supabase_url}/auth/v1/verify?token=${token_hash}&type=${email_action_type}&redirect_to=${redirect_to}`
 
   return (
     <Layout preview={copy.preview}>
-      <Heading>{copy.h1(username)}</Heading>
+      <Heading>{copy.h1}</Heading>
       <Hero>{copy.intro}</Hero>
 
       <Button href={href}>{copy.clickHere}</Button>
